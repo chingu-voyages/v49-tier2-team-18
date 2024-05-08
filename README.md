@@ -35,6 +35,8 @@ your repo access and to practice PR'ing with your team *before* you start
 coding!
 
 - Brian Slaby: [GitHub](https://github.com/BrianSlaby) / [LinkedIn](https://www.linkedin.com/in/brian-slaby-78022388/)
+- - Tanutsapon Jinaongkan : [GitHub](https://github.com/TanutsaponJ) / [LinkedIn](https://www.linkedin.com/in/tanutsapon/)
+  - 
 - Teammate name #2: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
 
    ...
