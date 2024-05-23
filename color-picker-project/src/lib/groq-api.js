@@ -1,5 +1,5 @@
-// EXPOSED FOR TESTING, WILL NEED TO MAKE IT SECURE W/ NETFLIFY FUNCTIONS OR SIMILAR
-const apiKey = "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"
+// TODO
+    // get new API Key; deleted after pushing to GitHub.
 
 
 const requestBody = {
