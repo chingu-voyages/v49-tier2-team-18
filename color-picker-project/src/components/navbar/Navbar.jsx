@@ -1,29 +1,38 @@
 import { navbarLinks } from "../../constants/Navbar";
 import { motion } from "framer-motion";
 
-// ! import Css file
-
+// Import CSS file
 import "./Navbar.css";
+
+// Import Logo and Icons
 import Logo from "./Logo";
 import { FiMenu, FiArrowRight } from "react-icons/fi";
 
+// Import React hooks
 import { useEffect, useState } from "react";
+
+// Import animation variants
 import {
   menuLinkArrowVariants,
   menuLinkVariants,
   menuVariants,
 } from "../../lib/utils";
 
+// Define Navbar component
 const Navbar = () => {
+  // State for managing the open/close state of the menu
   const [isOpen, setIsOpen] = useState(false);
 
+  // Effect for handling window resize
   useEffect(() => {
     const handleResize = () => {
+      // Close the menu if the window width is less than 760px
       if (window.innerWidth < 760) {
         setIsOpen(false);
       }
     };
 
+    // Add event listener for window resize
     window.addEventListener("resize", handleResize);
 
     // Clean up the event listener on component unmount
@@ -32,6 +41,7 @@ const Navbar = () => {
     };
   }, []);
 
+  // Render the Navbar
   return (
     <nav className="navbar">
       <div className="nav-left">
