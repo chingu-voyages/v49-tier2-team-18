@@ -59,6 +59,9 @@ const PromptForm = ({ color }) => {
                     onChange={handleContextChange}
                     required
                 >
+                    <option
+                        value=""
+                    >Select an option from the list</option>
                     {
                         contextOptions.map(option => {
                             return (
