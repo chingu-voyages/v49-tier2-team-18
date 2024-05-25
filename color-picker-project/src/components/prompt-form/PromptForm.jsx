@@ -41,7 +41,13 @@ const PromptForm = ({ color }) => {
             
 
     return (
-        <form>
+        <form className="prompt-form">
+
+            <div className="header-container">
+                <h2>Color Details</h2>
+                <p className="form-subheading">Have you selected a color? Great! Now provide us with a little more information that will help us make a recommendation that's customized to your needs.</p>
+            </div>
+            
 
             <div className="input-container">
                 <label
@@ -97,7 +103,7 @@ const PromptForm = ({ color }) => {
             </div>
         
             <button
-                className=""
+                className="submit-btn"
                 onClick={handleFormSubmit}
             >Submit</button>
         </form>
