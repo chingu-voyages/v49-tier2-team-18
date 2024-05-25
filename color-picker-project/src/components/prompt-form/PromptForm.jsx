@@ -52,7 +52,7 @@ const PromptForm = ({ color }) => {
             <div className="input-container">
                 <label
                     htmlFor="context-dropdown"
-                >What are you using this color for?</label>
+                >What are you using your selected color for?</label>
                 <select
                     id="context-dropdown"
                     name="context-dropdown"
@@ -75,7 +75,7 @@ const PromptForm = ({ color }) => {
             <div className="input-container">
                 <label
                     htmlFor="mood-input"
-                >Are you trying to evoke a specific mood or emotion?</label>
+                >If you are trying to evoke a specific mood or emotion, add it here.</label>
                 <input
                     id="mood-input"
                     name="mood-input"
@@ -91,7 +91,7 @@ const PromptForm = ({ color }) => {
             <div className="input-container">
                 <label
                     htmlFor="misc-info"
-                >Anything else we should know before making a recommendation?</label>
+                >Is there anything else we should know before making a recommendation?</label>
                 <textarea
                     id="misc-info"
                     name="misc-info"
