@@ -82,3 +82,9 @@
 .cta-button:active .icon {
   transform: rotate(-12deg);
 }
+
+.canvas-container {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}

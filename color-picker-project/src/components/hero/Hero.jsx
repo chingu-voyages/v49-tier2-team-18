@@ -1,3 +1,6 @@
+import { Canvas } from "@react-three/fiber";
+import { Stars } from "@react-three/drei";
+
 import "./Hero.css";
 import {
   animate,
@@ -81,6 +84,14 @@ const Hero = () => {
           Start free trial
           <FiArrowRight className="icon" />
         </motion.button>
+      </div>
+
+      {/* Add a Canvas component to render the stars */}
+
+      <div className="canvas-container">
+        <Canvas>
+          <Stars radius={50} count={2500} factor={4} fade speed={2} />
+        </Canvas>
       </div>
     </motion.section>
   );
