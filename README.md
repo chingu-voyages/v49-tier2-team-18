@@ -13,6 +13,14 @@ in your `readme` feel free to replace the text we've provided here.
 
 > Own it & Make it your Own!
 
+## Testing
+
+This Color Picker Project uses the 
+[Jest - JavaScript Testing Framework](https://jestjs.io).
+
+To run the tests use:
+`npm test`
+
 ## Team Documents
 
 You may find these helpful as you work together to organize your project.
