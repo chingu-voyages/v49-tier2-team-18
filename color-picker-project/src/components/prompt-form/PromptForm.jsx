@@ -2,7 +2,7 @@ import { useState } from "react"
 import "./PromptForm.css"
 import { getGroqChatCompletion } from "../../lib/groq-api"
 
-const PromptForm = ({ color }) => {
+const PromptForm = ({ color, setAiResponse }) => {
     const [ contextValue, setContextValue ] = useState("")
     const [ moodValue, setMoodValue ] = useState("")
     const [ miscInfoValue, setMiscInfoValue ] = useState("")
@@ -31,9 +31,11 @@ const PromptForm = ({ color }) => {
     async function handleFormSubmit(event) {
         event.preventDefault()
 
-        const groqResponse = await getGroqChatCompletion('#db3bcb', contextValue, moodValue, miscInfoValue)
+        if (contextValue) {
+            const groqResponse = await getGroqChatCompletion(color, contextValue, moodValue, miscInfoValue)
 
-        console.log(groqResponse)
+            setAiResponse(groqResponse)
+        }
     }       
 
     return (
