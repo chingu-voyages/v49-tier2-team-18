@@ -31,7 +31,9 @@ const PromptForm = ({ color }) => {
     async function handleFormSubmit(event) {
         event.preventDefault()
 
-        const response = await getGroqChatCompletion('#db3bcb', contextValue, moodValue, miscInfoValue)
+        const groqResponse = await getGroqChatCompletion('#db3bcb', contextValue, moodValue, miscInfoValue)
+
+        console.log(groqResponse)
     }       
 
     return (

@@ -20,7 +20,7 @@ async function getGroqChatCompletion(color, context, mood, miscInfo) {
         ? `Here is some additional information: ${miscInfo}.`
         : ""
 
-    const userContent = `Please recommend a color that works well with ${color}. ${userMood} ${userMiscInfo} Provide a brief explanation about your recommendation that includes a name for the recommended color, as well as its hexadecimal, RGB, or HSL code (use the same format as the color provided).`
+    const userContent = `Please recommend a color that works well with ${color}. ${userMood} ${userMiscInfo} Provide the code of the recommended color in the same format as the provided color, and a brief explanation about your recommendation.`
 
     const requestBody = {
         "messages": [
@@ -46,7 +46,7 @@ async function getGroqChatCompletion(color, context, mood, miscInfo) {
             body: JSON.stringify(requestBody)
         })
         const data = await response.json()
-        console.log(data.choices[0].message.content)
+        return data.choices[0].message.content
     }
     catch(error) {
         console.error(error)
