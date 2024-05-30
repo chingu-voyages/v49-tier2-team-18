@@ -1,5 +1,6 @@
 import { useState } from "react"
 import "./PromptForm.css"
+import { getGroqChatCompletion } from "../../lib/groq-api"
 
 const PromptForm = ({ color }) => {
     const [ contextValue, setContextValue ] = useState("")
@@ -15,8 +16,6 @@ const PromptForm = ({ color }) => {
         "other"
     ]
 
-    // if "other" selected set system context as a more generic assistant.
-
     function handleContextChange(event) {
         setContextValue(event.target.value)
     }    
@@ -29,16 +28,11 @@ const PromptForm = ({ color }) => {
         setMiscInfoValue(event.target.value)
     }
 
-    function handleFormSubmit(event) {
+    async function handleFormSubmit(event) {
         event.preventDefault()
-        // TO DO
-            // Generate AI prompt from input values
-        
-        console.log(contextValue)
-        console.log(moodValue)
-        console.log(miscInfoValue)
-    }
-            
+
+        const response = await getGroqChatCompletion('#db3bcb', contextValue, moodValue, miscInfoValue)
+    }       
 
     return (
         <form className="prompt-form">
