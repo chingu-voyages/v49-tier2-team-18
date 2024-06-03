@@ -22,7 +22,7 @@
   margin-bottom: 6px;
   display: inline-block;
   background-color: rgba(75, 85, 99, 0.5);
-  padding: 6px 12px;
+  padding: 10px 20px;
   border-radius: 99px;
   font-size: 1rem;
 }
@@ -51,7 +51,7 @@
 
 .description {
   margin: 24px 0;
-  max-width: 48rem; /* 1 rem = 16 px */
+  max-width: 768px; /* 1 rem = 16 px */
   font-size: 1rem;
   line-height: 1.65;
 }
@@ -60,7 +60,7 @@
   display: flex;
   align-items: center;
   gap: 6;
-  border-radius: 9999px;
+  border-radius: 99px;
   padding: 8px 16px;
   background-color: rgba(31, 41, 55, 0.1);
   transition: background-color 0.2s;
@@ -87,4 +87,11 @@
   position: absolute;
   inset: 0;
   z-index: 0;
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    margin-top: 4rem;
+    gap: 24px;
+  }
 }

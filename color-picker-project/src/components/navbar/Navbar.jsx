@@ -1,5 +1,5 @@
 import { navbarLinks } from "../../constants/Navbar";
-import { motion } from "framer-motion";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 
 // Import CSS file
 import "./Navbar.css";
@@ -23,6 +23,14 @@ const Navbar = () => {
   // State for managing the open/close state of the menu
   const [isOpen, setIsOpen] = useState(false);
 
+  const { scrollY } = useScroll();
+
+  const [scrolled, setScrolled] = useState(false);
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    setScrolled(latest > 250 ? true : false);
+  });
+
   // Effect for handling window resize
   useEffect(() => {
     const handleResize = () => {
@@ -43,7 +51,7 @@ const Navbar = () => {
 
   // Render the Navbar
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="nav-left">
         <motion.button
           className="menu-button"
