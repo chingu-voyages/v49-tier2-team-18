@@ -28,7 +28,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    setScrolled(latest > 250 ? true : false);
+    setScrolled(latest > 10 ? true : false);
   });
 
   // Effect for handling window resize
