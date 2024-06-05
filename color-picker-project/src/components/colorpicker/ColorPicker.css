@@ -17,22 +17,22 @@
 }
 
 .color-picker-wheel {
-    margin-top: 2%;
+    margin-top: 2rem;
 }
 
 .color-picker-color {
-    margin-bottom: 5%;
+    margin-bottom: 3rem;
 }
 
 .color-picker-material {
     width: 200px;
-    margin-top: 1.5%;
+    margin-top: 1rem;
 }
 
 .color-picker-title {
-    margin-top: 5%;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 350%;
+    margin-top: 4rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 4rem;
 }
 
 .color-picker-hsla {
@@ -41,5 +41,5 @@
 }
 
 .color-picker-alpha {
-  margin-top: 1.5%;
+  margin-top: 1rem;
 }
