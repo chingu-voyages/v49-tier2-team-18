@@ -70,11 +70,16 @@ h6 {
 */
 :root {
   --background-color: #f8f8fc;
+  --background-color-dark: #818183;
   --primary-color: #0d109b;
 
   --secondary-color: #0f0fff;
   --accent-color: #6365e8;
 
+  --off-white-color: #fafafa;
+
   --text-color-dark: #040409;
-  --text-color-light: #323238;
+}
+  --text-color-medium: #5c5c5e;
+  --text-color-light: #e5e7eb;
 }
