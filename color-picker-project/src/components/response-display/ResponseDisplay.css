@@ -1,0 +1,7 @@
+.response-container {
+    padding: 2em;
+    margin: 1em auto;
+    max-width: 700px;
+    background-color: var(--background-color);
+    border-radius: 12px;
+}

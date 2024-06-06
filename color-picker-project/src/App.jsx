@@ -2,6 +2,7 @@ import { useState } from "react"
 import Hero from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
 import PromptForm from "./components/prompt-form/PromptForm"
+import ResponseDisplay from "./components/response-display/ResponseDisplay"
 
 
 const App = () => {
@@ -22,6 +23,9 @@ const App = () => {
       <PromptForm 
         setAiResponse={setAiResponse}
         color={testColor}
+      />
+      <ResponseDisplay 
+        aiResponse={aiResponse}
       />
     </div>
   );
