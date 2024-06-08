@@ -4,14 +4,18 @@ const ColorDisplay = ({ color, colorRecs }) => {
 
     return (
         <div className="color-palette-container">
-            <div className="color-swatch-container">
-                <p className="swatch-label">Selected</p>
-                <div
-                    className="color-swatch"
-                    style={{backgroundColor: color}}
-                ></div>
-                <p>{color}</p>
-            </div>
+
+            {
+                color &&
+                <div className="color-swatch-container">
+                    <p className="swatch-label">Selected</p>
+                    <div
+                        className="color-swatch"
+                        style={{backgroundColor: color}}
+                    ></div>
+                    <p>{color}</p>
+                </div>
+            }
 
             {
                 colorRecs &&
