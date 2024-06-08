@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import ColorDisplay from "./ColorDisplay"
 import "./ResponseDisplay.css"
 
 const ResponseDisplay = ({ aiResponse, color }) => {
@@ -30,7 +31,6 @@ const ResponseDisplay = ({ aiResponse, color }) => {
     useEffect(() => {
         if (aiResponse) {
             extractRecommendedColors(aiResponse)
-            console.log(colorRecs)
         }
     }, [aiResponse])
 
@@ -49,6 +49,14 @@ const ResponseDisplay = ({ aiResponse, color }) => {
             {
                 aiResponse &&
                 formatResponseText(aiResponse)
+            }
+
+            {
+                color &&
+                <ColorDisplay 
+                    color={color}
+                    colorRecs={colorRecs}
+                />
             }
         </div>
     )
