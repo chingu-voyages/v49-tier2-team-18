@@ -1,8 +1,19 @@
-
-
+import { useState, useEffect } from "react"
 import "./ResponseDisplay.css"
 
-const ResponseDisplay = ({ aiResponse }) => {
+const ResponseDisplay = ({ aiResponse, color }) => {
+    const [ colorRecs, setColorRecs ] = useState([])
+    
+    function extractRecommendedColors(response) {
+        const hexRegex = /#([A-Fa-f0-9]{6})/g
+        const responseColors = response.match(hexRegex)
+        const filteredColors = responseColors.filter(colorCode => {
+            return colorCode !== color
+        })
+        const colorRecsSet = [ ...new Set(filteredColors) ]
+
+        setColorRecs(colorRecsSet)
+    }
 
     function formatResponseText(response) {
         return response.split("\n").map((line, index) => {
@@ -15,6 +26,13 @@ const ResponseDisplay = ({ aiResponse }) => {
             }
         })
     }
+
+    useEffect(() => {
+        if (aiResponse) {
+            extractRecommendedColors(aiResponse)
+            console.log(colorRecs)
+        }
+    }, [aiResponse])
 
     return (
         <div className="response-container">

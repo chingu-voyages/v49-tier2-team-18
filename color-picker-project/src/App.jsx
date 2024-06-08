@@ -20,6 +20,7 @@ const App = () => {
       />
       <ResponseDisplay 
         aiResponse={aiResponse}
+        color={testColor}
       />
     </div>
   );
