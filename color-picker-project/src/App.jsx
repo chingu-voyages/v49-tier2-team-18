@@ -2,6 +2,14 @@ import React, { useState } from 'react';
 import Hero from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
 import ColorPicker from "./components/colorpicker/ColorPicker"
+import PromptForm from "./components/prompt-form/PromptForm"
+
+
+// AI TESTING
+import { getGroqChatCompletion } from "./lib/groq-api";
+
+const response = await getGroqChatCompletion()
+// END AI TESTING
 
 const App = () => {
 
@@ -13,6 +21,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <ColorPicker hsva={hsva} setHsva={setHsva} hex={hex} setHex={setHex} />
+      <PromptForm />
     </div>
   );
 };
