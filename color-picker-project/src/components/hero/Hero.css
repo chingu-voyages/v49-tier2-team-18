@@ -8,6 +8,7 @@
   padding: 24px;
   text-align: center;
   color: var(--text-color-light);
+  border-radius: 0px 0px 24px 24px;
 }
 
 .content-container {
