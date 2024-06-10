@@ -50,7 +50,7 @@ coding!
 - Brian Slaby: [GitHub](https://github.com/BrianSlaby) / [LinkedIn](https://www.linkedin.com/in/brian-slaby-78022388/)
 - Tanutsapon Jinaongkan : [GitHub](https://github.com/TanutsaponJ) / [LinkedIn](https://www.linkedin.com/in/tanutsapon/)
 - Matthew Neie : [GitHub](https://github.com/MatthewNeie) / [LinkedIn](https://www.linkedin.com/in/matthew-neie/)
-- Teammate name #2: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
+- Sushmita Ghosh: [GitHub](https://github.com/Sushmita-Ghosh) / [LinkedIn](https://linkedin.com/in/sushghosh)
 
   ...
 
@@ -112,3 +112,8 @@ Once the development server is running, open your web browser and visit:
 ```arduino
   http://localhost:3000
 ```
+
+## Deployment:
+
+We have used Vercel to deploy our application.
+You can checkout our app [here](https://color-picker-project-omega.vercel.app/)
