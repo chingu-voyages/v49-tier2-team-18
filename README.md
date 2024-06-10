@@ -29,15 +29,8 @@ Meeting Agenda templates (located in the `/docs` directory in this repo):
 
 ## Our Team
 
-Everyone on your team should add their name along with a link to their GitHub
-& optionally their LinkedIn profiles below. Do this in Sprint #1 to validate
-your repo access and to practice PR'ing with your team *before* you start
-coding!
-
+- Jonathan Mendez: [GitHub](https://github.com/jonathanwmendez) / [LinkedIn](https://www.linkedin.com/in/jonathanwmendez/) / [Website](https://www.jonathanwmendez.com)
 - Brian Slaby: [GitHub](https://github.com/BrianSlaby) / [LinkedIn](https://www.linkedin.com/in/brian-slaby-78022388/)
 - Tanutsapon Jinaongkan : [GitHub](https://github.com/TanutsaponJ) / [LinkedIn](https://www.linkedin.com/in/tanutsapon/)
 - Matthew Neie : [GitHub](https://github.com/MatthewNeie) / [LinkedIn](https://www.linkedin.com/in/matthew-neie/)  
-- Teammate name #2: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
-
-   ...
 - Teammate name #n: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
