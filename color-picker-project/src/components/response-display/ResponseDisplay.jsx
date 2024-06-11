@@ -2,15 +2,15 @@ import { useState, useEffect } from "react"
 import ColorDisplay from "./ColorDisplay"
 import "./ResponseDisplay.css"
 
-const ResponseDisplay = ({ aiResponse, color }) => {
+const ResponseDisplay = ({ aiResponse, colorCodeFormat, color }) => {
     const [ colorRecs, setColorRecs ] = useState([])
     
+    const hexRegex = /#([A-Fa-f0-9]{6})/g
+
 
     // Refactor this to ADD selected color if it's NOT present in the response?
-    function extractRecommendedColors(response) {
-        // Add regex for other color formats!!!
-        const hexRegex = /#([A-Fa-f0-9]{6})/g
-        const responseColors = response.match(hexRegex)
+    function extractRecommendedColors(response, colorRegex) {
+        const responseColors = response.match(colorRegex)
         const filteredColors = responseColors.filter(colorCode => {
             return colorCode !== color
         })
@@ -33,7 +33,7 @@ const ResponseDisplay = ({ aiResponse, color }) => {
 
     useEffect(() => {
         if (aiResponse) {
-            extractRecommendedColors(aiResponse)
+            extractRecommendedColors(aiResponse, hexRegex)
         }
     }, [aiResponse])
 

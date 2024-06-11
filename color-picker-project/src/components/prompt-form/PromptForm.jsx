@@ -1,10 +1,15 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import "./PromptForm.css"
 import { getGroqChatCompletion } from "../../lib/groq-api"
 
-const PromptForm = ({ setAiResponse, setColorCodeFormat, hsva }) => {
+const PromptForm = ({ 
+    setAiResponse, 
+    colorCodeFormat, 
+    setColorCodeFormat, 
+    color 
+
+}) => {
     const [ contextValue, setContextValue ] = useState("")
-    const [ formatValue, setFormatValue ] = useState("hex")
     const [ numOfColors, setNumOfColors ] = useState(1)
     const [ colorSchemeValue, setColorSchemeValue ] = useState("")
     const [ moodValue, setMoodValue ] = useState("")
@@ -48,16 +53,12 @@ const PromptForm = ({ setAiResponse, setColorCodeFormat, hsva }) => {
     async function handleFormSubmit(event) {
         event.preventDefault()
 
-        if (contextValue && formatValue) {
-            const groqResponse = await getGroqChatCompletion(hsva, contextValue, formatValue, numOfColors, colorSchemeValue, moodValue, miscInfoValue)
+        if (contextValue && colorCodeFormat) {
+            const groqResponse = await getGroqChatCompletion(color, contextValue, colorCodeFormat, numOfColors, colorSchemeValue, moodValue, miscInfoValue)
 
             setAiResponse(groqResponse)
         }
     } 
-    
-    useEffect(()=> {
-        setColorCodeFormat(formatValue)
-    }, [formatValue])
 
     return (
         <form className="prompt-form">
@@ -101,7 +102,7 @@ const PromptForm = ({ setAiResponse, setColorCodeFormat, hsva }) => {
                 <select
                     id="format-dropdown"
                     name="format-dropdown"
-                    onChange={(event) => handleFieldChange(event, setFormatValue)}
+                    onChange={(event) => handleFieldChange(event, setColorCodeFormat)}
                     required
                 >
                     <option

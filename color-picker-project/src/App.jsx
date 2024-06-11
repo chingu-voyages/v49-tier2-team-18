@@ -27,11 +27,13 @@ const App = () => {
       />
       <PromptForm 
         setAiResponse={setAiResponse}
+        colorCodeFormat={setColorCodeFormat}
         setColorCodeFormat={setColorCodeFormat}
-        hsva={hsva}
+        color={hex}
       />
       <ResponseDisplay 
         aiResponse={aiResponse}
+        colorCodeFormat={colorCodeFormat}
         color={hex}
       />
     </div>

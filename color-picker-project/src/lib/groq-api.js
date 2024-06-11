@@ -5,7 +5,15 @@
 const apiKey = ""
 
 
-async function getGroqChatCompletion(color, context, format, number, colorScheme, mood, miscInfo) {
+async function getGroqChatCompletion(
+    color, 
+    context, 
+    format, 
+    number, 
+    colorScheme, 
+    mood, 
+    miscInfo
+) {
 
     const systemSpecialization = context === "other" 
         ? `who recommends harmonious color combinations for various purposes` 
