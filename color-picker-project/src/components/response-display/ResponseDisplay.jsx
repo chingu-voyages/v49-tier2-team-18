@@ -5,7 +5,10 @@ import "./ResponseDisplay.css"
 const ResponseDisplay = ({ aiResponse, color }) => {
     const [ colorRecs, setColorRecs ] = useState([])
     
+
+    // Refactor this to ADD selected color if it's NOT present in the response?
     function extractRecommendedColors(response) {
+        // Add regex for other color formats!!!
         const hexRegex = /#([A-Fa-f0-9]{6})/g
         const responseColors = response.match(hexRegex)
         const filteredColors = responseColors.filter(colorCode => {

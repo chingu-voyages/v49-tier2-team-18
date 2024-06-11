@@ -7,24 +7,32 @@ import ResponseDisplay from "./components/response-display/ResponseDisplay"
 
 const App = () => {
   
-  const [hsva, setHsva] = useState({ h: 214, s: 43, v: 90, a: 1 });
-  const [hex, setHex] = useState("#fff");
+  const [hsva, setHsva] = useState({ h: 214, s: 99, v: 99, a: 1 });
+  // hex state is not updating when color changed in ColorPicker
+  const [hex, setHex] = useState("#036ffc");
+  const [ colorCodeFormat, setColorCodeFormat ] = useState("hex")
   const [ aiResponse, setAiResponse ] = useState(null)
-  const [ testColor, setTestColor ] = useState("#036ffc")
 
+  console.log(colorCodeFormat)
 
   return (
     <div>
       <Navbar />
       <Hero />
-      <ColorPicker hsva={hsva} setHsva={setHsva} hex={hex} setHex={setHex} />
+      <ColorPicker 
+        hsva={hsva} 
+        setHsva={setHsva} 
+        hex={hex} 
+        setHex={setHex} 
+      />
       <PromptForm 
         setAiResponse={setAiResponse}
-        color={testColor}
+        setColorCodeFormat={setColorCodeFormat}
+        hsva={hsva}
       />
       <ResponseDisplay 
         aiResponse={aiResponse}
-        color={testColor}
+        color={hex}
       />
     </div>
   );
