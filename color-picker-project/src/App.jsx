@@ -2,6 +2,7 @@ import Footer from "./components/footer/Footer";
 import Hero from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
 import PromptForm from "./components/prompt-form/PromptForm";
+import TeamSection from "./components/teamsection/TeamSection";
 
 // AI TESTING
 import { getGroqChatCompletion } from "./lib/groq-api";
@@ -18,6 +19,7 @@ const App = () => {
       <Navbar />
       <Hero colorsTop={COLORS_TOP} />
       <PromptForm />
+      <TeamSection />
       <Footer colorsTop={COLORS_TOP} />
     </div>
   );
