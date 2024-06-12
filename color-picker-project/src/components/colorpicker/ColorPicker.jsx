@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { hsvaToRgbaString } from '@uiw/color-convert';
+import { hsvaToRgbaString, hsvaToHex } from '@uiw/color-convert';
 import Wheel from '@uiw/react-color-wheel';
 import ShadeSlider from '@uiw/react-color-shade-slider';
 import Alpha from '@uiw/react-color-alpha';
@@ -14,12 +14,17 @@ function ColorPicker ({hsva, setHsva, hex, setHex}) {
       <div className="color-picker-div">
           <div className="color-picker-container">
             <h2 className="color-picker-title">Choose a color...</h2>
-            <Wheel className="color-picker-wheel" color={hsva} onChange={(color) => {setHsva({ ...hsva, ...color.hsva }), setHex(color.hex)}} />
+            <Wheel className="color-picker-wheel"
+            color={hsva}
+            onChange={(color) => {
+              setHsva({ ...hsva, ...color.hsva }), setHex(color.hex);
+            }}
+            />
             <ShadeSlider
             hsva={hsva}
             style={{ width: 210, marginTop: 20 }}
             onChange={(newShade) => {
-              setHsva({ ...hsva, ...newShade });
+              setHsva({ ...hsva, ...newShade }), setHex(hsvaToHex(hsva));
             }}
             />
             <Material className="color-picker-material" style={{ width: '15%' }}
@@ -31,13 +36,13 @@ function ColorPicker ({hsva, setHsva, hex, setHex}) {
             <Alpha style= {{ width: '25%' }} className="color-picker-alpha"
               hsva={hsva}
               onChange={(newAlpha) => {
-                setHsva({ ...hsva, ...newAlpha });
+                setHsva({ ...hsva, ...newAlpha }), setHex(hsvaToRgbaString(hsva));
               }}
             />
             <EditableInputHSLA className="color-picker-hsla"
               hsva={hsva}
               onChange={(color) => {
-                setHsva({ ...hsva, ...color.hsva });
+                setHsva({ ...hsva, ...color.hsva }), setHex(color.hex);
               }}
             />
             <div className="color-picker-color" style={{ width: '70%', height: 50, marginTop: 20, background: hsvaToRgbaString(hsva) }}></div>
