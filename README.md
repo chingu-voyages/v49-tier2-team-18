@@ -1,11 +1,11 @@
 # voyage-tasks
 
-Your project's `readme` is as important to success as your code. For 
+Your project's `readme` is as important to success as your code. For
 this reason you should put as much care into its creation and maintenance
 as you would any other component of the application.
 
 If you are unsure of what should go into the `readme` let this article,
-written by an experienced Chingu, be your starting point - 
+written by an experienced Chingu, be your starting point -
 [Keys to a well written README](https://tinyurl.com/yk3wubft).
 
 And before we go there's "one more thing"! Once you decide what to include
@@ -40,5 +40,5 @@ Meeting Agenda templates (located in the `/docs` directory in this repo):
 - Jonathan Mendez: [GitHub](https://github.com/jonathanwmendez) / [LinkedIn](https://www.linkedin.com/in/jonathanwmendez/) / [Website](https://www.jonathanwmendez.com)
 - Brian Slaby: [GitHub](https://github.com/BrianSlaby) / [LinkedIn](https://www.linkedin.com/in/brian-slaby-78022388/)
 - Tanutsapon Jinaongkan : [GitHub](https://github.com/TanutsaponJ) / [LinkedIn](https://www.linkedin.com/in/tanutsapon/)
-- Matthew Neie : [GitHub](https://github.com/MatthewNeie) / [LinkedIn](https://www.linkedin.com/in/matthew-neie/)  
-- Teammate name #n: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
+- Matthew Neie : [GitHub](https://github.com/MatthewNeie) / [LinkedIn](https://www.linkedin.com/in/matthew-neie/)
+- Sushmita Ghosh: [GitHub](https://github.com/Sushmita-Ghosh) / [LinkedIn](https://linkedin.com/in/sushghosh)
