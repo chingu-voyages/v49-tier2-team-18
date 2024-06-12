@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { hsvaToRgbaString } from '@uiw/color-convert';
 import Wheel from '@uiw/react-color-wheel';
 import ShadeSlider from '@uiw/react-color-shade-slider';
@@ -7,13 +7,14 @@ import Material from '@uiw/react-color-material';
 import EditableInputHSLA from '@uiw/react-color-editable-input-hsla';
 import './ColorPicker.css'
 
+
 function ColorPicker ({hsva, setHsva, hex, setHex}) {
 
     return (
       <div className="color-picker-div">
           <div className="color-picker-container">
             <h2 className="color-picker-title">Choose a color...</h2>
-            <Wheel className="color-picker-wheel" color={hsva} onChange={(color) => setHsva({ ...hsva, ...color.hsva })} />
+            <Wheel className="color-picker-wheel" color={hsva} onChange={(color) => {setHsva({ ...hsva, ...color.hsva }), setHex(color.hex)}} />
             <ShadeSlider
             hsva={hsva}
             style={{ width: 210, marginTop: 20 }}
