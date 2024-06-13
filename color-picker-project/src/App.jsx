@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Hero from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
 import ColorPicker from "./components/colorpicker/ColorPicker"
@@ -11,8 +11,7 @@ const App = () => {
   const [hsva, setHsva] = useState({ h: 214, s: 43, v: 90, a: 1 });
   const [hex, setHex] = useState("#fff");
   const [ aiResponse, setAiResponse ] = useState(null)
-  const [ testColor, setTestColor ] = useState("#036ffc")
-
+  const [ testColor, setTestColor ] = useState("#036ffc");
 
   return (
     <div>
@@ -21,11 +20,11 @@ const App = () => {
       <ColorPicker hsva={hsva} setHsva={setHsva} hex={hex} setHex={setHex} />
       <PromptForm 
         setAiResponse={setAiResponse}
-        color={testColor}
+        color={hex}
       />
       <ResponseDisplay 
         aiResponse={aiResponse}
-        color={testColor}
+        color={hex}
       />
       <MoreInfo />
     </div>
