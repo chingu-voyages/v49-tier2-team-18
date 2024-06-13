@@ -4,6 +4,7 @@ import Navbar from "./components/navbar/Navbar";
 import ColorPicker from "./components/colorpicker/ColorPicker"
 import PromptForm from "./components/prompt-form/PromptForm"
 import ResponseDisplay from "./components/response-display/ResponseDisplay"
+import MoreInfo from "./components/more-info/MoreInfo"
 
 const App = () => {
   
@@ -36,6 +37,7 @@ const App = () => {
         colorCodeFormat={colorCodeFormat}
         color={hex}
       />
+      <MoreInfo />
     </div>
   );
 };
