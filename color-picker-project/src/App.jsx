@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Hero from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
 import ColorPicker from "./components/colorpicker/ColorPicker"
