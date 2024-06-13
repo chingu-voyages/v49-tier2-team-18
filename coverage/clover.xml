@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1718246623374" clover="3.2.0">
-  <project timestamp="1718246623374" name="All files">
-    <metrics statements="989" coveredstatements="4" conditionals="14" coveredconditionals="1" methods="14" coveredmethods="1" elements="1017" coveredelements="6" complexity="0" loc="989" ncloc="989" packages="10" files="14" classes="14"/>
+<coverage generated="1718248923493" clover="3.2.0">
+  <project timestamp="1718248923493" name="All files">
+    <metrics statements="998" coveredstatements="4" conditionals="15" coveredconditionals="1" methods="15" coveredmethods="1" elements="1028" coveredelements="6" complexity="0" loc="998" ncloc="998" packages="9" files="15" classes="15"/>
     <package name="v49-tier2-team-18">
       <metrics statements="201" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="jest.config.js" path="/home/mendezjw/v49-tier2-team-18/jest.config.js">
@@ -210,7 +210,19 @@
       </file>
     </package>
     <package name="v49-tier2-team-18.color-picker-project">
-      <metrics statements="12" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="21" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="babel.config.js" path="/home/mendezjw/v49-tier2-team-18/color-picker-project/babel.config.js">
+        <metrics statements="9" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+      </file>
       <file name="vite.config.js" path="/home/mendezjw/v49-tier2-team-18/color-picker-project/vite.config.js">
         <metrics statements="12" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
@@ -228,7 +240,7 @@
       </file>
     </package>
     <package name="v49-tier2-team-18.color-picker-project.src">
-      <metrics statements="22" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="26" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="1"/>
       <file name="App.jsx" path="/home/mendezjw/v49-tier2-team-18/color-picker-project/src/App.jsx">
         <metrics statements="22" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
@@ -253,6 +265,13 @@
         <line num="20" count="0" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
         <line num="22" count="0" type="stmt"/>
+      </file>
+      <file name="sum.js" path="/home/mendezjw/v49-tier2-team-18/color-picker-project/src/sum.js">
+        <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
       </file>
     </package>
     <package name="v49-tier2-team-18.color-picker-project.src.components.hero">
@@ -754,16 +773,6 @@
         <line num="34" count="0" type="stmt"/>
         <line num="35" count="0" type="stmt"/>
         <line num="36" count="0" type="stmt"/>
-      </file>
-    </package>
-    <package name="v49-tier2-team-18.color-picker-project.tests">
-      <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-      <file name="sum.js" path="/home/mendezjw/v49-tier2-team-18/color-picker-project/tests/sum.js">
-        <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
       </file>
     </package>
     <package name="v49-tier2-team-18.coverage.lcov-report">
