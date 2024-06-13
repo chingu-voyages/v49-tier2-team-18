@@ -15,6 +15,8 @@ const App = () => {
   const [ aiResponse, setAiResponse ] = useState(null)
 
   console.log(colorCodeFormat)
+  console.log(hsva)
+  console.log(hex)
 
   return (
     <div>
