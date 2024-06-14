@@ -2,7 +2,7 @@
 
 // API KEY PLACEHOLDER
     // Manually paste API key when testing locally, delete before committing/pushing.
-const apiKey = "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"
+const apiKey = ""
 
 
 async function getGroqChatCompletion(
