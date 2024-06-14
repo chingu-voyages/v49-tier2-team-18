@@ -52,10 +52,14 @@ const PromptForm = ({
     async function handleFormSubmit(event) {
         event.preventDefault()
 
-        if (contextValue && colorCodeFormat) {
-            const groqResponse = await getGroqChatCompletion(color, contextValue, colorCodeFormat, numOfColors, colorSchemeValue, moodValue, miscInfoValue)
-
-            setAiResponse(groqResponse)
+        try {
+            if (contextValue && colorCodeFormat) {
+                const groqResponse = await getGroqChatCompletion(color, contextValue, colorCodeFormat, numOfColors, colorSchemeValue, moodValue, miscInfoValue)
+    
+                setAiResponse(groqResponse)
+            }
+        } catch (error) {
+            console.error("error fetching data:", error)
         }
     } 
 
