@@ -27,8 +27,7 @@ const PromptForm = ({
     const formatOptions = [
         "hex",
         "rgb",
-        "hsl",
-        "hsv"
+        "hsl"
     ]
 
     const colorSchemes = [
