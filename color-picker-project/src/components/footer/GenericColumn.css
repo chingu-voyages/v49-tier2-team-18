@@ -1,0 +1,37 @@
+.generic-column {
+  display: grid;
+  grid-gap: 8px;
+  font-size: 14px;
+  grid-template-columns: 2 1fr;
+  /* Center all items in the grid */
+  place-items: center;
+}
+
+@media (min-width: 768px) {
+  .generic-column {
+    grid-column: span 2;
+  }
+}
+
+.column-title {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-bottom: 8px;
+}
+
+.link {
+  display: flex;
+  letter-spacing: 1px;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-color-light);
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #e5e5e5;
+  text-decoration: underline;
+}
