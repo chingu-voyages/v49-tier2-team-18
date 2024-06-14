@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Hero from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
 import ColorPicker from "./components/colorpicker/ColorPicker"
@@ -7,37 +7,29 @@ import ResponseDisplay from "./components/response-display/ResponseDisplay"
 import MoreInfo from "./components/more-info/MoreInfo"
 
 const App = () => {
-  
-  const [hsva, setHsva] = useState({ h: 214, s: 99, v: 99, a: 1 });
-  // hex state is not updating when color changed in ColorPicker
-  const [hex, setHex] = useState("#036ffc");
   const [ colorCodeFormat, setColorCodeFormat ] = useState("hex")
+  const [ currentColor, setCurrentColor ] = useState("#036ffc")
   const [ aiResponse, setAiResponse ] = useState(null)
-
-  console.log(colorCodeFormat)
-  console.log(hsva)
-  console.log(hex)
+  
 
   return (
     <div>
       <Navbar />
       <Hero />
       <ColorPicker 
-        hsva={hsva} 
-        setHsva={setHsva} 
-        hex={hex} 
-        setHex={setHex} 
+        colorCodeFormat={colorCodeFormat}
+        setCurrentColor={setCurrentColor} 
       />
       <PromptForm 
         setAiResponse={setAiResponse}
-        colorCodeFormat={setColorCodeFormat}
+        colorCodeFormat={colorCodeFormat}
         setColorCodeFormat={setColorCodeFormat}
-        color={hex}
+        color={currentColor}
       />
       <ResponseDisplay 
         aiResponse={aiResponse}
         colorCodeFormat={colorCodeFormat}
-        color={hex}
+        color={currentColor}
       />
       <MoreInfo />
     </div>
