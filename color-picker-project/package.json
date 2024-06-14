@@ -10,6 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@uiw/react-color": "^2.3.0",
+    "@uiw/react-color-alpha": "^2.3.0",
+    "@uiw/react-color-editable-input": "^2.3.0",
+    "@uiw/react-color-editable-input-hsla": "^2.3.0",
+    "@uiw/react-color-material": "^2.3.0",
+    "@uiw/react-color-wheel": "^2.3.0",
     "@react-three/drei": "^9.105.6",
     "@react-three/fiber": "^8.16.6",
     "framer-motion": "^11.2.4",

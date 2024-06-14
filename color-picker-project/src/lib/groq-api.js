@@ -5,22 +5,37 @@
 const apiKey = ""
 
 
-const requestBody = {
-    "messages": [
-        {
-            role: "system",
-            content: "You are a helpful assistant specializing in recommending harmonious color combinations for various purposes.  For example, outfit coordination, interior design, website design, graphic design projects, etc."
-        },
-        {
-            role: "user",
-            content: "What kind of outfit would look good with red shoes?  For example, what color shirt and pants."
-        }
-    ],
-    "model": "llama3-8b-8192"
-}
+async function getGroqChatCompletion(color, context, mood, miscInfo) {
+    const systemSpecialization = context === "other" 
+        ? `who recommends harmonious color combinations for various purposes` 
+        : `who specializes in making harmonious color recommendations for ${context}`
 
-// will eventually need to take parameters for request body, etc.
-async function getGroqChatCompletion() {
+    const systemContent = `You are an enthusiastic assistant ${systemSpecialization}. You will be given a specific color in hexadecimal, RGB, or HSL format. You may also be given a specific mood or emotion that the user is trying to evoke, and you may be given additional information that the user wants you to take into account. Your main job is to recommend another color that works well with the color provided by the user. You should take all information provided by the user into consideration.`
+
+    const userMood = mood 
+        ? `I'm trying to evoke the following emotion: ${mood}.` 
+        : "" 
+
+    const userMiscInfo = miscInfo
+        ? `Here is some additional information: ${miscInfo}.`
+        : ""
+
+    const userContent = `Please recommend a color that works well with ${color}. ${userMood} ${userMiscInfo} Provide the code of the recommended color in the same format as the provided color, and a brief explanation about your recommendation.`
+
+    const requestBody = {
+        "messages": [
+            {
+                role: "system",
+                content: systemContent
+            },
+            {
+                role: "user",
+                content: userContent
+            }
+        ],
+        "model": "llama3-8b-8192"
+    }
+
     try {
         const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
             method: "POST",
@@ -31,7 +46,7 @@ async function getGroqChatCompletion() {
             body: JSON.stringify(requestBody)
         })
         const data = await response.json()
-        console.log(data.choices[0].message.content)
+        return data.choices[0].message.content
     }
     catch(error) {
         console.error(error)
