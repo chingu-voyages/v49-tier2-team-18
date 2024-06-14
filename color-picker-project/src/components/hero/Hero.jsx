@@ -1,5 +1,8 @@
+/* eslint-disable react/prop-types */
 import { Canvas } from "@react-three/fiber";
 import { Stars } from "@react-three/drei";
+
+// rest of your Hero.jsx code
 
 import "./Hero.css";
 import {
@@ -13,16 +16,13 @@ import { useEffect } from "react";
 
 import { FiArrowRight } from "react-icons/fi";
 
-// Define the colors for the top of the page
-const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
-
-const Hero = () => {
+const Hero = ({ colorsTop }) => {
   // Create a motion value for the color, initially set to the first color in COLORS_TOP
-  const color = useMotionValue(COLORS_TOP[0]);
+  const color = useMotionValue(colorsTop[0]);
 
   // Use the useEffect hook to start an animation when the component mounts
   useEffect(() => {
-    animate(color, COLORS_TOP, {
+    animate(color, colorsTop, {
       ease: "easeInOut",
       duration: 10,
       repeat: Infinity,
