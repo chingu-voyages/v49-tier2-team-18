@@ -32,7 +32,7 @@ Run `npm run dev`
 
 
 
-# EXTRA INFO THAT WILL BE DELETED AT FINALIZATION
+# Extra Info That Will Be Deleted At Finalization
 
 ## voyage-tasks
 
