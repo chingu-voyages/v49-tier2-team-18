@@ -27,7 +27,7 @@ function ColorPicker ({hsva, setHsva, hex, setHex}) {
               setHsva({ ...hsva, ...newShade }), setHex(hsvaToHex(hsva));
             }}
             />
-            <Material className="color-picker-material" style={{ width: '15%' }}
+            <Material className="color-picker-material" style={{ width: '150px' }}
               color={hsva}
               onChange={(color) => {
                 setHsva(color.hsva), setHex(color.hex);
