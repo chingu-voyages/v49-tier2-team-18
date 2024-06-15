@@ -11,6 +11,16 @@ PalettePro uses a customizable color picker. The user may choose a color from th
 -Groq API  
 -Vercel  
 
+## Run PalettePro Locally
+
+Clone PalletePro locally  
+Run `npm i`
+Run `npm run dev`
+
+## PalettePro External Link
+
+[Google.example](https://www.google.com/)
+
 
 ## voyage-tasks
 
