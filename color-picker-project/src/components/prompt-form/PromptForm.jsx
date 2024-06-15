@@ -6,8 +6,9 @@ const PromptForm = ({
     setAiResponse, 
     colorCodeFormat, 
     setColorCodeFormat, 
-    color 
-
+    color, 
+    setHasError, 
+    setErrorDisplay
 }) => {
     const [ contextValue, setContextValue ] = useState("")
     const [ numOfColors, setNumOfColors ] = useState(1)
@@ -52,11 +53,25 @@ const PromptForm = ({
     async function handleFormSubmit(event) {
         event.preventDefault()
 
-        if (contextValue && colorCodeFormat) {
-            const groqResponse = await getGroqChatCompletion(color, contextValue, colorCodeFormat, numOfColors, colorSchemeValue, moodValue, miscInfoValue)
-
-            setAiResponse(groqResponse)
+        try {
+            if (contextValue && colorCodeFormat) {
+                const groqResponse = await getGroqChatCompletion(color, contextValue, colorCodeFormat, numOfColors, colorSchemeValue, moodValue, miscInfoValue)
+                
+                setHasError(false)
+                setErrorDisplay(null)
+                setAiResponse(groqResponse)
+            } else {
+                setHasError(true)
+                setErrorDisplay("Missing mandatory form field: please select what you're using the selected color for.")
+            }
+        } catch (error) {
+            console.error("error fetching data:", error)
+            console.log("console logged error", error)
+            setHasError(true)
+            setErrorDisplay(error.message)
         }
+
+        
     } 
 
     return (

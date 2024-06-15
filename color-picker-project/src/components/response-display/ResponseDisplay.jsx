@@ -2,7 +2,13 @@ import { useState, useEffect } from "react"
 import ColorDisplay from "./ColorDisplay"
 import "./ResponseDisplay.css"
 
-const ResponseDisplay = ({ aiResponse, colorCodeFormat, color }) => {
+const ResponseDisplay = ({ 
+    aiResponse, 
+    colorCodeFormat, 
+    color, 
+    hasError, 
+    errorDisplay 
+}) => {
     const [ colorRecs, setColorRecs ] = useState([])
     const [ colorCodeRegex, setColorCodeRegex ] = useState(/#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})/g)
     
@@ -52,6 +58,13 @@ const ResponseDisplay = ({ aiResponse, colorCodeFormat, color }) => {
 
     return (
         <div className="response-container">
+
+            {
+                hasError &&
+                <p className="error-display">{errorDisplay}</p>
+
+            }    
+
             {
                 !aiResponse &&
                 <p>Select a color, fill out the color details, and check back here for your personalized recommendation!</p>

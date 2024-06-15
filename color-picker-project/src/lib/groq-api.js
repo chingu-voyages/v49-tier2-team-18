@@ -62,11 +62,17 @@ async function getGroqChatCompletion(
             },
             body: JSON.stringify(requestBody)
         })
+
+        if (!response.ok) {
+            throw new Error("there was a problem connecting to Groq. Please try again later.")
+        }
+
         const data = await response.json()
         return data.choices[0].message.content
     }
     catch(error) {
         console.error(error)
+        throw new Error(error)
     } 
 }
 
