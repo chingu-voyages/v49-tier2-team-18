@@ -1,4 +1,18 @@
-# voyage-tasks
+# PalettePro
+
+## Color Picker
+
+PalettePro uses a customizable color picker. The user may choose a color from the color wheel and modify the shade, hue, saturation, and light of the chosen color. The user may input RGB values to generate a color and may also input a hex value to obtain a specific color. The chosen color is used in the prompt for the AI response.
+
+## Dependencies
+
+-React
+-React Color
+-Groq API
+-Vercel
+
+
+## voyage-tasks
 
 Your project's `readme` is as important to success as your code. For
 this reason you should put as much care into its creation and maintenance
