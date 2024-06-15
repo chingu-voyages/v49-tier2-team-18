@@ -14,8 +14,8 @@ PalettePro uses a customizable color picker. The user may choose a color from th
 ## Run PalettePro Locally
 
 Clone PalletePro locally  
-Run `npm i`
-Run `npm run dev`
+Run `npm i`  
+Run `npm run dev`  
 
 ## PalettePro External Link
 
