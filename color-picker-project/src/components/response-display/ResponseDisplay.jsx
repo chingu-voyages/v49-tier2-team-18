@@ -10,8 +10,6 @@ const ResponseDisplay = ({ aiResponse, colorCodeFormat, color }) => {
     const rgbRegex = /(rgba?|RGBA?):?\(?\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*(?:,\s*(0|0?\.\d+|1(\.0)?)\s*)?\)?/g
     const hslRegex = /(hsla?|HSLA?):?\(?\s*(\d{1,3})\s*,\s*(\d{1,2}(\.\d+)?%|100%)\s*,\s*(\d{1,2}(\.\d+)?%|100%)\s*(?:,\s*(0|0?\.\d+|1(\.0)?)\s*)?\)?/g
     
-
-    // Refactor this to ADD selected color if it's NOT present in the response?
     function extractRecommendedColors(response, colorRegex) {
         const responseColors = response.match(colorRegex)
         const filteredColors = responseColors.filter(colorCode => {
