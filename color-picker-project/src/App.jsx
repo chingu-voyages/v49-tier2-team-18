@@ -15,6 +15,8 @@ const App = () => {
   const [ colorCodeFormat, setColorCodeFormat ] = useState("hex")
   const [ currentColor, setCurrentColor ] = useState("#036ffc")
   const [ aiResponse, setAiResponse ] = useState(null)
+  const [ hasError, setHasError ] = useState(false)
+  const [ errorDisplay, setErrorDisplay ] = useState(null)
   
 
   return (
@@ -30,11 +32,15 @@ const App = () => {
         colorCodeFormat={colorCodeFormat}
         setColorCodeFormat={setColorCodeFormat}
         color={currentColor}
+        setHasError={setHasError}
+        setErrorDisplay={setErrorDisplay}
       />
       <ResponseDisplay 
         aiResponse={aiResponse}
         colorCodeFormat={colorCodeFormat}
         color={currentColor}
+        hasError={hasError}
+        errorDisplay={errorDisplay}
       />
       <MoreInfo />
       <TeamSection />

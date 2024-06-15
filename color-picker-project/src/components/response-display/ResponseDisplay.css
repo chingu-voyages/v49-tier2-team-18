@@ -34,3 +34,8 @@
 .swatch-label {
     font-size: 0.875rem;
 }
+
+.error-display {
+    margin-bottom: 1em;
+    color: red;
+}
