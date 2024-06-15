@@ -6,10 +6,10 @@ PalettePro uses a customizable color picker. The user may choose a color from th
 
 ## Dependencies
 
-*React 
-*React Color 
-*Groq API 
-*Vercel 
+-React  
+-React Color  
+-Groq API  
+-Vercel  
 
 
 ## voyage-tasks
