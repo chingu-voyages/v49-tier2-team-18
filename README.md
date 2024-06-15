@@ -21,6 +21,18 @@ Run `npm run dev`
 
 [Google.example](https://www.google.com/)
 
+## Our Team
+
+- Jonathan Mendez: [GitHub](https://github.com/jonathanwmendez) / [LinkedIn](https://www.linkedin.com/in/jonathanwmendez/) / [Website](https://www.jonathanwmendez.com)
+- Brian Slaby: [GitHub](https://github.com/BrianSlaby) / [LinkedIn](https://www.linkedin.com/in/brian-slaby-78022388/)
+- Tanutsapon Jinaongkan : [GitHub](https://github.com/TanutsaponJ) / [LinkedIn](https://www.linkedin.com/in/tanutsapon/)
+- Matthew Neie : [GitHub](https://github.com/MatthewNeie) / [LinkedIn](https://www.linkedin.com/in/matthew-neie/)
+- Sushmita Ghosh: [GitHub](https://github.com/Sushmita-Ghosh) / [LinkedIn](https://linkedin.com/in/sushghosh)
+
+
+
+
+#EXTRA INFO THAT WILL BE DELETED AT FINALIZATION
 
 ## voyage-tasks
 
@@ -50,11 +62,3 @@ Meeting Agenda templates (located in the `/docs` directory in this repo):
 - Meeting - App Vision & Feature Planning --> ./docs/meeting-vision_and_feature_planning.docx
 - Meeting - Sprint Retrospective, Review, and Planning --> ./docs/meeting-sprint_retrospective_review_and_planning.docx
 - Meeting - Sprint Open Topic Session --> ./docs/meeting-sprint_open_topic_session.docx
-
-## Our Team
-
-- Jonathan Mendez: [GitHub](https://github.com/jonathanwmendez) / [LinkedIn](https://www.linkedin.com/in/jonathanwmendez/) / [Website](https://www.jonathanwmendez.com)
-- Brian Slaby: [GitHub](https://github.com/BrianSlaby) / [LinkedIn](https://www.linkedin.com/in/brian-slaby-78022388/)
-- Tanutsapon Jinaongkan : [GitHub](https://github.com/TanutsaponJ) / [LinkedIn](https://www.linkedin.com/in/tanutsapon/)
-- Matthew Neie : [GitHub](https://github.com/MatthewNeie) / [LinkedIn](https://www.linkedin.com/in/matthew-neie/)
-- Sushmita Ghosh: [GitHub](https://github.com/Sushmita-Ghosh) / [LinkedIn](https://linkedin.com/in/sushghosh)
