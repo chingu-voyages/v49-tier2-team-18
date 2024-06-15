@@ -1,37 +1,34 @@
-# voyage-tasks
+# PalettePro
 
-Your project's `readme` is as important to success as your code. For
-this reason you should put as much care into its creation and maintenance
-as you would any other component of the application.
+## Overview
 
-If you are unsure of what should go into the `readme` let this article,
-written by an experienced Chingu, be your starting point -
-[Keys to a well written README](https://tinyurl.com/yk3wubft).
+**Placeholder**
+This should be a quick run through of why you made this project, it’s key goals, and why it might be helpful to whoever is reading this documentation. Keep it brief, but specific.
 
-And before we go there's "one more thing"! Once you decide what to include
-in your `readme` feel free to replace the text we've provided here.
+Add live site URL and GitHub repo URL
+**Placeholder**
 
-> Own it & Make it your Own!
+## Features
 
-## Team Documents
+**Placeholder**
+This can be a list of features or just a description of what this project does / what can be done with it. I prefer presenting information in a bullet or numbered list as it improves the ability to scan through and gather information quickly. Short, specific pieces of information are much easier to digest.
+**Placeholder**
 
-You may find these helpful as you work together to organize your project.
+## Tech Stack / Dependencies
 
-- [Team Project Ideas](./docs/team_project_ideas.md)
-- [Team Decision Log](./docs/team_decision_log.md)
+**Placeholder**
+Listing other peoples work that your project relies on is not only in good taste it helps show what your project is built on and adds insight to compatibility/integration with outside projects.
 
-Meeting Agenda templates (located in the `/docs` directory in this repo):
+Dependency lists can also help others see what tech you are familiar with. If you are hunting for a new job listing out the cool new tech stuff you used in a project can make it stand out a bit more.
 
-- Meeting - Voyage Kickoff --> ./docs/meeting-voyage_kickoff.docx
-- Meeting - App Vision & Feature Planning --> ./docs/meeting-vision_and_feature_planning.docx
-- Meeting - Sprint Retrospective, Review, and Planning --> ./docs/meeting-sprint_retrospective_review_and_planning.docx
-- Meeting - Sprint Open Topic Session --> ./docs/meeting-sprint_open_topic_session.docx
+This too is usually a list and I prefer to make each dependency a link directing the reader to more information on that package or additional project.
+**Placeholder**
 
-## Tech Stack
 
-**Client:** React, Css
+- React.js
+- Groq API
 
-## Color Reference
+## UI Color Reference
 
 | Color            | Hex                                                              |
 | ---------------- | ---------------------------------------------------------------- |
@@ -42,33 +39,24 @@ Meeting Agenda templates (located in the `/docs` directory in this repo):
 
 ## Our Team
 
-Everyone on your team should add their name along with a link to their GitHub
-& optionally their LinkedIn profiles below. Do this in Sprint #1 to validate
-your repo access and to practice PR'ing with your team _before_ you start
-coding!
-
+- Jonathan Mendez: [GitHub](https://github.com/jonathanwmendez) / [LinkedIn](https://www.linkedin.com/in/jonathanwmendez/) / [Website](https://www.jonathanwmendez.com)
 - Brian Slaby: [GitHub](https://github.com/BrianSlaby) / [LinkedIn](https://www.linkedin.com/in/brian-slaby-78022388/)
 - Tanutsapon Jinaongkan : [GitHub](https://github.com/TanutsaponJ) / [LinkedIn](https://www.linkedin.com/in/tanutsapon/)
 - Matthew Neie : [GitHub](https://github.com/MatthewNeie) / [LinkedIn](https://www.linkedin.com/in/matthew-neie/)
-- Teammate name #2: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
-
-  ...
-
-- Teammate name #n: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
+- Sushmita Ghosh: [GitHub](https://github.com/Sushmita-Ghosh) / [LinkedIn](https://linkedin.com/in/sushghosh)
 
 ## Acknowledgements
 
 - [Wiki about Color Scheme](https://en.wikipedia.org/wiki/Color_scheme)
-- [OpenAI API docs](https://platform.openai.com/docs/introduction)
-- [Color picker library](https://iro.js.org/)
+- [Groq docs](https://console.groq.com/docs/quickstart)
+- [React Color docs](https://uiwjs.github.io/react-color/#/)
+- [Vercel docs](https://vercel.com/docs)
 
-## Installation
+## Running This Project Locally:
 
-Installing Example Project Built with React.js
+To install and run the project locally, follow these steps:
 
-This example project is designed to showcase the integration of React.js. To install and run the project locally, follow these steps:
-
-## Prerequisites
+### Prerequisites
 
 📙 Node.js and npm (Node Package Manager) should be installed on your machine.
 
@@ -78,7 +66,7 @@ Open your terminal or command prompt.
 Use the git clone command to clone the project repository:
 
 ```bash
- https://github.com/chingu-voyages/v49-tier2-team-16.git
+ https://github.com/chingu-voyages/v49-tier2-team-18
 ```
 
 ### 2. Navigate to the Project Directory:
@@ -102,12 +90,12 @@ Run the following command to install project dependencies using npm:
 After the dependencies are installed, start the development server:
 
 ```sql
-  npm dev
+  npm run dev
 ```
 
 ### 5.View the Project:
 
-Once the development server is running, open your web browser and visit:
+Once the development server is running, open your web browser and visit the provide local host url:
 
 ```arduino
   http://localhost:3000
