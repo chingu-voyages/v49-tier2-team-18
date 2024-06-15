@@ -2,12 +2,18 @@ import { useState, useEffect } from "react"
 import ColorDisplay from "./ColorDisplay"
 import "./ResponseDisplay.css"
 
-const ResponseDisplay = ({ aiResponse, color }) => {
+const ResponseDisplay = ({ aiResponse, colorCodeFormat, color }) => {
     const [ colorRecs, setColorRecs ] = useState([])
+    const [ colorCodeRegex, setColorCodeRegex ] = useState(/#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})/g)
     
-    function extractRecommendedColors(response) {
-        const hexRegex = /#([A-Fa-f0-9]{6})/g
-        const responseColors = response.match(hexRegex)
+    const hexRegex = /#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})/g
+    const rgbRegex = /(rgba?|RGBA?):?\(?\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*(?:,\s*(0|0?\.\d+|1(\.0)?)\s*)?\)?/g
+    const hslRegex = /(hsla?|HSLA?):?\(?\s*(\d{1,3})\s*,\s*(\d{1,2}(\.\d+)?%|100%)\s*,\s*(\d{1,2}(\.\d+)?%|100%)\s*(?:,\s*(0|0?\.\d+|1(\.0)?)\s*)?\)?/g
+    
+
+    // Refactor this to ADD selected color if it's NOT present in the response?
+    function extractRecommendedColors(response, colorRegex) {
+        const responseColors = response.match(colorRegex)
         const filteredColors = responseColors.filter(colorCode => {
             return colorCode !== color
         })
@@ -29,8 +35,18 @@ const ResponseDisplay = ({ aiResponse, color }) => {
     }
 
     useEffect(() => {
+        if (colorCodeFormat === "hsl") {
+            setColorCodeRegex(hslRegex)
+        } else if (colorCodeFormat === "rgb") {
+            setColorCodeRegex(rgbRegex)
+        } else {
+            setColorCodeRegex(hexRegex)
+        }
+    }, [colorCodeFormat])
+
+    useEffect(() => {
         if (aiResponse) {
-            extractRecommendedColors(aiResponse)
+            extractRecommendedColors(aiResponse, colorCodeRegex)
         }
     }, [aiResponse])
 

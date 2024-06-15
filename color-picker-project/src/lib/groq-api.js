@@ -5,12 +5,29 @@
 const apiKey = ""
 
 
-async function getGroqChatCompletion(color, context, mood, miscInfo) {
+async function getGroqChatCompletion(
+    color, 
+    context, 
+    format, 
+    number, 
+    colorScheme, 
+    mood, 
+    miscInfo
+) {
+
     const systemSpecialization = context === "other" 
         ? `who recommends harmonious color combinations for various purposes` 
         : `who specializes in making harmonious color recommendations for ${context}`
 
-    const systemContent = `You are an enthusiastic assistant ${systemSpecialization}. You will be given a specific color in hexadecimal, RGB, or HSL format. You may also be given a specific mood or emotion that the user is trying to evoke, and you may be given additional information that the user wants you to take into account. Your main job is to recommend another color that works well with the color provided by the user. You should take all information provided by the user into consideration.`
+    const systemContent = `You are an enthusiastic assistant ${systemSpecialization}. You will be given a specific color in hexadecimal, rgb, or hsl format. You may also be given additional information that the user wants you to take into account. Your main job is to recommend colors that work well with the color provided by the user. You should take all information provided by the user into consideration. For hsl codes, always include the "%" symbol after the numeric value for saturation and lightness. Do not use the optional alpha values in your color codes for the recommended color, even if the supplied color has an alpha value.`
+
+    const userNumber = number === 1
+        ? `${number} color that works well`
+        : `${number} colors that work well`
+
+    const userColorScheme = colorScheme
+        ? `I'd like the recommended colors to fit within a ${colorScheme} color scheme, along with provided color: ${color}.`
+        : ""
 
     const userMood = mood 
         ? `I'm trying to evoke the following emotion: ${mood}.` 
@@ -20,7 +37,7 @@ async function getGroqChatCompletion(color, context, mood, miscInfo) {
         ? `Here is some additional information: ${miscInfo}.`
         : ""
 
-    const userContent = `Please recommend a color that works well with ${color}. ${userMood} ${userMiscInfo} Provide the code of the recommended color in the same format as the provided color, and a brief explanation about your recommendation.`
+    const userContent = `Please recommend ${userNumber} with ${color}. ${userColorScheme} ${userMood} Your color recommendations should always be stated using ${format} color codes, in addition to any other type of color code requested. Provide a brief explanation about your recommendation. ${userMiscInfo}`
 
     const requestBody = {
         "messages": [
