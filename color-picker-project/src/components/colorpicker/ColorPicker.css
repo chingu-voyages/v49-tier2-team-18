@@ -19,6 +19,7 @@
 
 .color-picker-color {
     margin-bottom: 3rem;
+    width: '70%'
 }
 
 .color-picker-material {
@@ -39,4 +40,28 @@
 
 .color-picker-alpha {
   margin-top: 1rem;
+}
+
+@media (max-width: 1080px) {
+    .color-picker-title {
+        font-size: 2.5rem;
+    }
+    .color-picker-color {
+        width: 23rem;
+    }
+}
+
+@media (min-width: 1080px) {
+    .color-picker-color {
+        width: 70%;
+    }
+}
+
+@media (max-width: 800px) {
+    .color-picker-title {
+        font-size: 2rem;
+    }
+    .color-picker-color {
+        width: 23rem;
+    }
 }

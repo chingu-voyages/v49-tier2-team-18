@@ -45,7 +45,7 @@ function ColorPicker ({hsva, setHsva, hex, setHex}) {
                 setHsva({ ...hsva, ...color.hsva }), setHex(color.hex);
               }}
             />
-            <div className="color-picker-color" style={{ width: '70%', height: 50, marginTop: 20, background: hsvaToRgbaString(hsva) }}></div>
+            <div className="color-picker-color" style={{ height: 50, marginTop: 20, background: hsvaToRgbaString(hsva) }}></div>
           </div>
       </div>
     );
