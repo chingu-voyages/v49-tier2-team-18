@@ -1,11 +1,13 @@
+import SectionHeader from "../utils/SectionHeader"
 import "./MoreInfo.css"
 
 const MoreInfo = () => {
 
     return (
-        <section className="more-info-section">
+        <section className="more-info-section section-wrapper">
 
-            <h2>More Information</h2>
+            <SectionHeader title="More Information" dir="r" />
+            
 
             <div className="info-container">
 

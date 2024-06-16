@@ -1,18 +1,18 @@
 .more-info-section {
-    padding: 2em;
+    /* padding: 2em;
     width: 100%;
-    background-color: var(--background-color);
+    background-color: var(--background-color); */
     display: grid;
     justify-items: center;
     gap: 2em;
 }
 
-.more-info-section > h2 {
+.more-info-section > .sectionHeader {
     grid-column: 1 / -1;
-    text-align: center;
+    /* text-align: center;
     letter-spacing: 1px;
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 2rem; */
 }
 
 .info-container {
