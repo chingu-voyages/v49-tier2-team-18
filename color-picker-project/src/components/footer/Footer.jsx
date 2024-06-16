@@ -43,8 +43,8 @@ const Footer = ({ colorsTop }) => {
           <h1 className="footer-title">PalettePro</h1>
         </div>
 
-        {FooterMenu.map(({ title, links }) => (
-          <GenericColumn title={title} links={links} key={title} />
+        {FooterMenu.map(({ title, links }, index) => (
+          <GenericColumn title={title} links={links} key={index} />
         ))}
       </MaxWidthWrapper>
       <div className="footer-bottom">
