@@ -2,33 +2,52 @@
 
 ## Overview
 
-**Placeholder**
-This should be a quick run through of why you made this project, it’s key goals, and why it might be helpful to whoever is reading this documentation. Keep it brief, but specific.
+PalettePro is an AI-powered tool that can provide recommendations for any color selected by users. An intuitive color picker allows users to select a color from a color wheel, or enter hex, rgb, or hsl values manually. A form guides users to provide additional details, utilizing dropdown menues with pre-populated options as much as possible in order to ensure quality prompt construction. This structure also helps to provide recommendations that are as consistent as possible. Recommendations are displayed as a full text response from the AI model, accompanied by color swatches for the originally selected color as well as any recommended colors.
 
-Add live site URL and GitHub repo URL
-**Placeholder**
+<img width="1420" alt="image" src="https://github.com/chingu-voyages/v49-tier2-team-18/assets/106836794/7ca5554e-844d-49a3-ad29-954bedb825ad">
+
+## PalettePro External Link
+
+[PalettePro](https://color-picker-project-omega.vercel.app/)
 
 ## Features
 
-**Placeholder**
-This can be a list of features or just a description of what this project does / what can be done with it. I prefer presenting information in a bullet or numbered list as it improves the ability to scan through and gather information quickly. Short, specific pieces of information are much easier to digest.
-**Placeholder**
+### Color Picker
 
-## Tech Stack / Dependencies
+PalettePro uses a customizable color picker. The user may choose a color from the color wheel and modify the shade, hue, saturation, and light of the chosen color. The user may input rgb, hex, or hsl values to generate a color. The chosen color is used in the prompt for the AI response.
 
-**Placeholder**
-Listing other peoples work that your project relies on is not only in good taste it helps show what your project is built on and adds insight to compatibility/integration with outside projects.
-
-Dependency lists can also help others see what tech you are familiar with. If you are hunting for a new job listing out the cool new tech stuff you used in a project can make it stand out a bit more.
-
-This too is usually a list and I prefer to make each dependency a link directing the reader to more information on that package or additional project.
-**Placeholder**
+<img width="763" alt="image" src="https://github.com/chingu-voyages/v49-tier2-team-18/assets/106836794/e828d4c8-4d96-4b9f-b414-60299d52073d">
 
 
-- React.js
-- Groq API
+### Color Details Form
 
-## UI Color Reference
+After selecting a starting color, the user enters additional details in a simple form which will help to construct the prompt sent to the Groq AI API. This ensures that the color recommendations provided by PalettePro are as relevant to the user's use case as possible. The user must enter a context using the first field on the form; this form field asks the user what they're using the selected color for, and they select options from a dropdown menu ("other" is available as an option if none of the preset options apply). Additional form fields ask users what color codes they would like their recommendation in, how many recommended colors they would like, whether they need a specific harmonious color scheme (with dropdown options to select from), whether they are trying to evoke a specific mood or emotion, and a final text field to provide any additional information that might be helpful.
+
+<img width="763" alt="image" src="https://github.com/chingu-voyages/v49-tier2-team-18/assets/106836794/ea004931-4f30-4bd7-83ea-3d4cb9cafd7a">
+
+### Groq AI
+
+The full text of the AI-generated color recommendation is displayed below the Color Details form. Additionally, color swatches below the recommendation display the original selected color as well as all recommended colors. Color swatches are labeled in the color code format selected by the user (defaulting to hex codes if the user did not specify).
+
+PalettePro uses Artificial Intelligence (AI) to recommend the perfect color combinations for your use cases. It is powered by Groq's Language Processing Unit (LPU) Inference Engine, which offers industry-leading compute speed, quality, and energy efficiency. The specific Large Language Model (LLM) utilized by PalettePro is Meta's llama3-8b-8192.
+
+You can learn more about Groq [HERE](https://wow.groq.com/why-groq/).
+
+You can learn more about Meta's llama3-8b LLM [HERE](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct).
+
+## Dependencies
+
+- React  
+- React Color  
+- Groq AI API
+- React-three/fiber
+- React-three/drei
+- React Icons
+- Framer Motion
+- Vite
+- Vercel  
+
+## Color Reference
 
 | Color            | Hex                                                              |
 | ---------------- | ---------------------------------------------------------------- |
@@ -42,17 +61,16 @@ This too is usually a list and I prefer to make each dependency a link directing
 - Jonathan Mendez: [GitHub](https://github.com/jonathanwmendez) / [LinkedIn](https://www.linkedin.com/in/jonathanwmendez/) / [Website](https://www.jonathanwmendez.com)
 - Brian Slaby: [GitHub](https://github.com/BrianSlaby) / [LinkedIn](https://www.linkedin.com/in/brian-slaby-78022388/)
 - Tanutsapon Jinaongkan : [GitHub](https://github.com/TanutsaponJ) / [LinkedIn](https://www.linkedin.com/in/tanutsapon/)
-- Matthew Neie : [GitHub](https://github.com/MatthewNeie) / [LinkedIn](https://www.linkedin.com/in/matthew-neie/)
+- Matthew Neie : [GitHub](https://github.com/MatthewNeie) / [LinkedIn](https://www.linkedin.com/in/matthew-neie/) / [Website](https://matthew-neie.netlify.app/)
 - Sushmita Ghosh: [GitHub](https://github.com/Sushmita-Ghosh) / [LinkedIn](https://linkedin.com/in/sushghosh)
 
 ## Acknowledgements
 
 - [Wiki about Color Scheme](https://en.wikipedia.org/wiki/Color_scheme)
-- [Groq docs](https://console.groq.com/docs/quickstart)
-- [React Color docs](https://uiwjs.github.io/react-color/#/)
-- [Vercel docs](https://vercel.com/docs)
+- [OpenAI API docs](https://platform.openai.com/docs/introduction)
+- [Color picker library](https://iro.js.org/)
 
-## Running This Project Locally:
+## Running This Project Locally
 
 To install and run the project locally, follow these steps:
 
@@ -76,7 +94,6 @@ Use the cd command to move into the project directory:
 ```bash
   cd project-directory-name
 ```
-
 ### 3. Run the following command to install project dependencies using npm:
 
 Run the following command to install project dependencies using npm:
@@ -85,17 +102,16 @@ Run the following command to install project dependencies using npm:
   npm install
 ```
 
-### 4.Start the Development Server
+### 4. Start the Development Server
 
 After the dependencies are installed, start the development server:
 
 ```sql
   npm run dev
 ```
+### 5. View the Project:
 
-### 5.View the Project:
-
-Once the development server is running, open your web browser and visit the provide local host url:
+Once the development server is running, open your web browser and visit:
 
 ```arduino
   http://localhost:3000
