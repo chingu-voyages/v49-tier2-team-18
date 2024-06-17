@@ -1,0 +1,69 @@
+.color-picker-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.color-picker-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.color-picker-wheel {
+    margin-top: 2rem;
+}
+
+.color-picker-color {
+    margin-bottom: 3rem;
+    height: 50px;
+    margin-top: 20px;
+    width: 70%
+}
+
+.color-picker-material {
+    width: 150px;
+    margin-top: 1rem;
+}
+
+.color-picker-title {
+    margin-top: 4rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 3.5rem;
+}
+
+.color-picker-hsla {
+    margin-top: 1.5%;
+    background-color: white;
+}
+
+.color-picker-alpha {
+  margin-top: 1rem;
+}
+
+@media (max-width: 1080px) {
+    .color-picker-title {
+        font-size: 2.5rem;
+    }
+    .color-picker-color {
+        width: 23rem;
+    }
+}
+
+@media (min-width: 1080px) {
+    .color-picker-color {
+        width: 70%;
+    }
+}
+
+@media (max-width: 800px) {
+    .color-picker-title {
+        font-size: 2rem;
+    }
+    .color-picker-color {
+        width: 23rem;
+    }
+}

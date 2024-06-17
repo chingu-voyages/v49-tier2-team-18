@@ -65,6 +65,21 @@ h6 {
   isolation: isolate;
 }
 
+.section-wrapper {
+  position: relative;
+  z-index: 10;
+  max-width: 1150px;
+  margin: auto;
+  padding: 9.6rem;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .section-wrapper {
+    padding: 7.2rem 2.4rem;
+  }
+}
+
 /* 
   ** Color 
 */
@@ -79,5 +94,19 @@ h6 {
   --off-white-color: #fafafa;
 
   --text-color-dark: #040409;
+
+  --text-color-medium: #5c5c5e;
+  
   --text-color-light: #e5e7eb;
+
+  /* 
+    ## Font-size
+  */
+  --text-xxs: 0.9rem;
+  --text-xs: 1.6rem;
+  --text-sm: 1.8rem;
+  --text-md: 2.2rem;
+  --text-lg: 3.6rem;
+  --text-xl: 5.6rem;
+  --text-2xl: 9.6rem;
 }

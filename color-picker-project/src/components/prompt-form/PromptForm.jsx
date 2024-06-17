@@ -1,8 +1,19 @@
 import { useState } from "react"
 import "./PromptForm.css"
+import { getGroqChatCompletion } from "../../lib/groq-api"
 
-const PromptForm = ({ color }) => {
+const PromptForm = ({ 
+    setAiResponse, 
+    colorCodeFormat, 
+    setColorCodeFormat, 
+    color,
+    setHasError, 
+    setErrorDisplay 
+
+}) => {
     const [ contextValue, setContextValue ] = useState("")
+    const [ numOfColors, setNumOfColors ] = useState(1)
+    const [ colorSchemeValue, setColorSchemeValue ] = useState("")
     const [ moodValue, setMoodValue ] = useState("")
     const [ miscInfoValue, setMiscInfoValue ] = useState("")
 
@@ -15,30 +26,51 @@ const PromptForm = ({ color }) => {
         "other"
     ]
 
-    // if "other" selected set system context as a more generic assistant.
+    const formatOptions = [
+        "hex",
+        "rgb",
+        "hsl"
+    ]
 
-    function handleContextChange(event) {
-        setContextValue(event.target.value)
-    }    
+    const colorSchemes = [
+        "monochromatic",
+        "complementary",
+        "analogous",
+        "triadic",
+        "tetradic"
+    ]
 
-    function handleMoodChange(event) {
-        setMoodValue(event.target.value)
+    function handleFieldChange(event, stateSetter) {
+        stateSetter(event.target.value)
     }
 
-    function handleMiscInfoChange(event) {
-        setMiscInfoValue(event.target.value)
+    function handleNumberInputChange(event) {
+        if (event.target.value > 5) {
+            event.target.value = 5
+        }
+        setNumOfColors(event.target.value)
     }
 
-    function handleFormSubmit(event) {
+    async function handleFormSubmit(event) {
         event.preventDefault()
-        // TO DO
-            // Generate AI prompt from input values
-        
-        console.log(contextValue)
-        console.log(moodValue)
-        console.log(miscInfoValue)
-    }
-            
+
+        try {
+            if (contextValue && colorCodeFormat) {
+                const groqResponse = await getGroqChatCompletion(color, contextValue, colorCodeFormat, numOfColors, colorSchemeValue, moodValue, miscInfoValue)
+                
+                setHasError(false)
+                setErrorDisplay(null)
+                setAiResponse(groqResponse)
+            } else {
+                setHasError(true)
+                setErrorDisplay("Missing mandatory form field: please select what you're using the selected color for.")
+            }
+        } catch (error) {
+            console.error("error fetching data:", error)
+            setHasError(true)
+            setErrorDisplay(error.message)
+        }
+    } 
 
     return (
         <form className="prompt-form">
@@ -56,7 +88,7 @@ const PromptForm = ({ color }) => {
                 <select
                     id="context-dropdown"
                     name="context-dropdown"
-                    onChange={handleContextChange}
+                    onChange={(event) => handleFieldChange(event, setContextValue)}
                     required
                 >
                     <option
@@ -64,6 +96,73 @@ const PromptForm = ({ color }) => {
                     >Select an option from the list</option>
                     {
                         contextOptions.map(option => {
+                            return (
+                                <option
+                                    value={option}
+                                    key={option}
+                                >{option}</option>
+                            )
+                        })
+                    }
+                </select>
+            </div>
+
+            <div className="input-container">
+                <label
+                    htmlFor="format-dropdown"
+                >What format would you like your recommended color(s) in?</label>
+                <select
+                    id="format-dropdown"
+                    name="format-dropdown"
+                    onChange={(event) => handleFieldChange(event, setColorCodeFormat)}
+                    required
+                >
+                    <option
+                        value=""
+                    >Select an option from the list</option>
+                    {
+                        formatOptions.map(option => {
+                            return (
+                                <option
+                                    value={option}
+                                    key={option}
+                                >{option}</option>
+                            )
+                        })
+                    }
+                </select>
+            </div>
+
+            <div className="input-container">
+                <label
+                    htmlFor="num-colors-input"
+                >How many recommended colors do you need (up to 5)?</label>
+                <input
+                    id="num-colors-input"
+                    name="num-colors-input"
+                    type="number"
+                    min="1"
+                    max="5"
+                    placeholder={1}
+                    value={numOfColors}
+                    onChange={(event) => handleNumberInputChange(event)}
+                ></input>
+            </div>
+
+            <div className="input-container">
+                <label
+                    htmlFor="color-scheme-input"
+                >Are you looking for a particular color scheme?</label>
+                <select
+                    id="color-scheme-input"
+                    name="color-scheme-input"
+                    onChange={(event) => handleFieldChange(event, setColorSchemeValue)}
+                >
+                    <option
+                        value=""
+                    >Select an option from the list</option>
+                    {
+                        colorSchemes.map(option => {
                             return (
                                 <option
                                     value={option}
@@ -86,7 +185,7 @@ const PromptForm = ({ color }) => {
                     placeholder="Type a mood or emotion (50 characters or less)"
                     maxLength="50"
                     value={moodValue}
-                    onChange={handleMoodChange}
+                    onChange={(event) => handleFieldChange(event, setMoodValue)}
                 ></input>
             </div>
 
@@ -101,7 +200,7 @@ const PromptForm = ({ color }) => {
                     placeholder="Type any additional information here (300 characters or less)"
                     maxLength="300"
                     value={miscInfoValue}
-                    onChange={handleMiscInfoChange}
+                    onChange={(event) => handleFieldChange(event, setMiscInfoValue)}
                 ></textarea>
             </div>
         

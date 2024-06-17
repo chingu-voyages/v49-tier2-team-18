@@ -1,41 +1,41 @@
 
-
-// API KEY PLACEHOLDER
-    // Manually paste API key when testing locally, delete before committing/pushing.
-const apiKey = ""
-
-
-const requestBody = {
-    "messages": [
-        {
-            role: "system",
-            content: "You are a helpful assistant specializing in recommending harmonious color combinations for various purposes.  For example, outfit coordination, interior design, website design, graphic design projects, etc."
-        },
-        {
-            role: "user",
-            content: "What kind of outfit would look good with red shoes?  For example, what color shirt and pants."
-        }
-    ],
-    "model": "llama3-8b-8192"
-}
-
-// will eventually need to take parameters for request body, etc.
-async function getGroqChatCompletion() {
+async function getGroqChatCompletion(
+    color,
+    context,
+    format,
+    number,
+    colorScheme,
+    mood,
+    miscInfo
+) {
     try {
-        const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+        const response = await fetch("/api/getGroqChatCompletion", {
             method: "POST",
             headers: {
-                'Authorization': `Bearer ${apiKey}`,
-                'Content-Type': 'application/json'
+                "Content-Type": "application/json"
             },
-            body: JSON.stringify(requestBody)
+            body: JSON.stringify({
+                color,
+                context,
+                format,
+                number,
+                colorScheme,
+                mood,
+                miscInfo
+            })
         })
+    
+        if (!response.ok) {
+            throw new Error("there was a problem connecting to Groq. Please try again later.")
+        }
+    
         const data = await response.json()
-        console.log(data.choices[0].message.content)
-    }
-    catch(error) {
+        return data.message
+
+    } catch(error) {
         console.error(error)
-    } 
+        throw new Error(error)
+    }    
 }
 
 export {
