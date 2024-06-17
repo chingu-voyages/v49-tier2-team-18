@@ -46,7 +46,7 @@ function ColorPicker ({ colorCodeFormat, setCurrentColor }) {
               setHsva({ ...hsva, ...newShade }), setHex(hsvaToHex(hsva)), setRgba(hsvaToRgba(hsva)), setHsla(hsvaToHsla(hsva));
             }}
             />
-            <Material className="color-picker-material" style={{ width: '15%' }}
+            <Material className="color-picker-material" style={{ width: '150px' }}
               color={hsva}
               onChange={(color) => {
                 setHsva(color.hsva), setHex(color.hex), setRgba(color.rgba), setHsla(color.hsla);
@@ -64,7 +64,7 @@ function ColorPicker ({ colorCodeFormat, setCurrentColor }) {
                 setHsva({ ...hsva, ...color.hsva }), setHex(color.hex), setRgba(color.rgba), setHsla(color.hsla);
               }}
             />
-            <div className="color-picker-color" style={{ width: '70%', height: 50, marginTop: 20, background: hsvaToRgbaString(hsva) }}></div>
+            <div className="color-picker-color" style={{ background: hsvaToRgbaString(hsva) }}></div>
           </div>
       </div>
     );
