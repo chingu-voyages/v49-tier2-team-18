@@ -1,5 +1,7 @@
 import ProfilePic1 from "../assets/TanProfile.png";
 import ProfilePic2 from "../assets/BrianProfileimg.png";
+import ProfilePic3 from "../assets/MatthewProfile.jpeg";
+import ProfileBlank from "../assets/Default_pfp.jpg";
 
 export const TEAM_INFORMATION = [
   {
@@ -23,11 +25,28 @@ export const TEAM_INFORMATION = [
   {
     name: "Matthew Neie",
     Role: "Web Developer",
-    profileImg:
-      "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
+    profileImg: ProfilePic3,
     LinkedInProfile: "https://www.linkedin.com/in/matthew-neie/",
     GitHubProfile: "https://github.com/MatthewNeie",
     description:
       "I am a full stack web developer who recently graduated from an immersive Coding Bootcamp at Fullstack Academy. I enjoy the creativity and logistics of web development. I am currently working on additional portfolio projects.",
   },
+  {
+    name: "Jonathan Mendez",
+    Role: "Scrum Master",
+    profileImg: ProfileBlank,
+    LinkedInProfile: "https://www.linkedin.com/in/jonathanwmendez/",
+    GitHubProfile: "https://github.com/jonathanwmendez",
+    description:
+      "Web Developer | Professional Musician"
+  },
+  {
+    name: "Sushmita Ghosh",
+    Role: "Web Developer",
+    profileImg: ProfileBlank,
+    LinkedInProfile: "https://www.linkedin.com/in/sushghosh/",
+    GitHubProfile: "https://github.com/Sushmita-Ghosh",
+    description:
+      "I'm a passionate Frontend Developer based out of the beautiful land of Canada. My journey in the world of web development has been an exciting adventure, and I'm here to share my experiences and contribute to innovative projects."
+  }
 ];
