@@ -19,11 +19,13 @@
 
 .color-picker-color {
     margin-bottom: 3rem;
-    width: '70%'
+    height: 50px;
+    margin-top: 20px;
+    width: 70%
 }
 
 .color-picker-material {
-    width: 4rem;
+    width: 150px;
     margin-top: 1rem;
 }
 
