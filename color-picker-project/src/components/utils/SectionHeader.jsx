@@ -1,5 +1,6 @@
 import "./SectionHeader.css";
 
+// eslint-disable-next-line react/prop-types
 const SectionHeader = ({ title, dir = "r" }) => {
   return (
     <div
