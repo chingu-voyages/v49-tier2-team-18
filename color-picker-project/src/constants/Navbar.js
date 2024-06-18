@@ -1,18 +1,14 @@
 export const navbarLinks = [
   {
-    label: "Solutions",
-    route: "/",
+    label: "About",
+    path: "about",
   },
   {
-    label: "Community",
-    route: "/",
+    label: "ColorPicker",
+    path: "color",
   },
   {
-    label: "Pricing",
-    route: "/",
-  },
-  {
-    label: "Company",
-    route: "/",
+    label: "Team",
+    path: "team",
   },
 ];

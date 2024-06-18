@@ -105,7 +105,7 @@ const Navbar = () => {
               whileHover={{ y: -30, transition: { duration: 0.5 } }}
             >
               <span className="menu-link-text">{item.label}</span>
-              <span className="menu-link-text-active">{item.label}</span>
+              <span className="menu-link-text-active">{item.route}</span>
             </motion.div>
           </a>
         ))}
