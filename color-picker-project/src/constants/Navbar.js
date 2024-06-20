@@ -5,10 +5,10 @@ export const navbarLinks = [
   },
   {
     label: "ColorPicker",
-    path: "color",
+    path: "colorPicker",
   },
   {
     label: "Team",
-    path: "team",
+    path: "teamSection",
   },
 ];

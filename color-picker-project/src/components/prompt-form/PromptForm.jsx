@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./PromptForm.css";
 import { getGroqChatCompletion } from "../../lib/groq-api";
+import SectionHeader from "../utils/SectionHeader";
 
 const PromptForm = ({ color, setAiResponse }) => {
   const [contextValue, setContextValue] = useState("");
@@ -44,7 +45,8 @@ const PromptForm = ({ color, setAiResponse }) => {
   }
 
   return (
-    <form className="prompt-form">
+    <form className="section-wrapper" id="colorPicker">
+      <SectionHeader title="ColorDetail" />
       <div className="header-container">
         <h2>Color Details</h2>
         <p className="form-subheading">
