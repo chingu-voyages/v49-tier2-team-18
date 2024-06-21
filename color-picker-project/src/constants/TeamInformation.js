@@ -37,7 +37,8 @@ export const TEAM_INFORMATION = [
     profileImg: ProfileBlank,
     LinkedInProfile: "https://www.linkedin.com/in/jonathanwmendez/",
     GitHubProfile: "https://github.com/jonathanwmendez",
-    description: "Web Developer | Professional Musician",
+    description:
+      "Web Developer | Professional Musician",
   },
   {
     name: "Sushmita Ghosh",

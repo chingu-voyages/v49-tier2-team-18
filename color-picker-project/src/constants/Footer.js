@@ -5,7 +5,7 @@ export const FooterMenu = [
       {
         title: "PalettePro",
         href: "/#",
-      },
+      }
     ],
   },
   {
@@ -14,7 +14,7 @@ export const FooterMenu = [
       {
         title: "Chingu",
         href: "https://www.chingu.io/",
-      },
+      }
     ],
   },
   {
@@ -23,7 +23,8 @@ export const FooterMenu = [
       {
         title: "Voyage 49, Tier 2, Team 18",
         href: "https://github.com/chingu-voyages/v49-tier2-team-18",
-      },
+
+      }
     ],
-  },
+  }
 ];
