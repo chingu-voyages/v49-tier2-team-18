@@ -13,6 +13,7 @@ import { useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Stars } from "@react-three/drei";
 
+// eslint-disable-next-line react/prop-types
 const Footer = ({ colorsTop }) => {
   const color = useMotionValue(colorsTop[0]);
 

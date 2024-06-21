@@ -67,7 +67,8 @@ function ColorPicker ({ colorCodeFormat, setCurrentColor }) {
             <div className="color-picker-color" style={{ background: hsvaToRgbaString(hsva) }}></div>
           </div>
       </div>
-    );
-  }
+    </div>
+  );
+}
 
-  export default ColorPicker;
+export default ColorPicker;

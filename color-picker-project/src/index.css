@@ -68,7 +68,7 @@ h6 {
 .section-wrapper {
   position: relative;
   z-index: 10;
-  max-width: 1150px;
+  max-width: 1250px;
   margin: auto;
   padding: 9.6rem;
   overflow: hidden;
@@ -96,7 +96,7 @@ h6 {
   --text-color-dark: #040409;
 
   --text-color-medium: #5c5c5e;
-  
+
   --text-color-light: #e5e7eb;
 
   /* 

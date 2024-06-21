@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react"
-import ColorDisplay from "./ColorDisplay"
-import "./ResponseDisplay.css"
+/* eslint-disable react/prop-types */
+import { useState, useEffect } from "react";
+import ColorDisplay from "./ColorDisplay";
+import "./ResponseDisplay.css";
 
 const ResponseDisplay = ({ 
     aiResponse, 

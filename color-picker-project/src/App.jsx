@@ -17,7 +17,6 @@ const App = () => {
   const [ aiResponse, setAiResponse ] = useState(null)
   const [ hasError, setHasError ] = useState(false)
   const [ errorDisplay, setErrorDisplay ] = useState(null)
-  
 
   return (
     <div>

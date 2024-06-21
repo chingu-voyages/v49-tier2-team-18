@@ -1,5 +1,6 @@
 import { navbarLinks } from "../../constants/Navbar";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { Link as ScrollLink } from "react-scroll";
 
 // Import CSS file
 import "./Navbar.css";
@@ -61,6 +62,7 @@ const Navbar = () => {
         >
           <FiMenu />
         </motion.button>
+
         <Logo />
 
         {isOpen && (
@@ -71,9 +73,11 @@ const Navbar = () => {
             className="nav-menu"
           >
             {navbarLinks.map((item) => (
-              <motion.a
+              <ScrollLink
                 variants={menuLinkVariants}
-                href={item.route}
+                to={item.path}
+                smooth={true}
+                offset={-100}
                 key={item.label}
                 rel="nofollow"
                 className="menu-link"
@@ -88,15 +92,17 @@ const Navbar = () => {
                   <span className="menu-link-text">{item.label}</span>
                   <span className="menu-link-text-active">{item.label}</span>
                 </motion.div>
-              </motion.a>
+              </ScrollLink>
             ))}
           </motion.div>
         )}
 
         {navbarLinks.map((item) => (
-          <a
-            href={item.route}
+          <ScrollLink
+            to={item.path}
             key={item.label}
+            smooth={true}
+            offset={-100}
             rel="nofollow"
             className="nav-link"
           >
@@ -107,7 +113,7 @@ const Navbar = () => {
               <span className="menu-link-text">{item.label}</span>
               <span className="menu-link-text-active">{item.label}</span>
             </motion.div>
-          </a>
+          </ScrollLink>
         ))}
       </div>
 

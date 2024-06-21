@@ -1,6 +1,7 @@
-import { useState } from "react"
-import "./PromptForm.css"
-import { getGroqChatCompletion } from "../../lib/groq-api"
+import { useState } from "react";
+import "./PromptForm.css";
+import { getGroqChatCompletion } from "../../lib/groq-api";
+import SectionHeader from "../utils/SectionHeader";
 
 const PromptForm = ({ 
     setAiResponse, 
@@ -17,14 +18,14 @@ const PromptForm = ({
     const [ moodValue, setMoodValue ] = useState("")
     const [ miscInfoValue, setMiscInfoValue ] = useState("")
 
-    const contextOptions = [
-        "web design",
-        "graphic design",
-        "fashion",
-        "interior decorating",
-        "art",
-        "other"
-    ]
+  const contextOptions = [
+    "web design",
+    "graphic design",
+    "fashion",
+    "interior decorating",
+    "art",
+    "other",
+  ];
 
     const formatOptions = [
         "hex",
@@ -51,8 +52,9 @@ const PromptForm = ({
         setNumOfColors(event.target.value)
     }
 
-    async function handleFormSubmit(event) {
-        event.preventDefault()
+  function handleMiscInfoChange(event) {
+    setMiscInfoValue(event.target.value);
+  }
 
         try {
             if (contextValue && colorCodeFormat) {
@@ -71,15 +73,21 @@ const PromptForm = ({
             setErrorDisplay(error.message)
         }
     } 
+      setAiResponse(groqResponse);
+    }
+  }
 
-    return (
-        <form className="prompt-form">
-
-            <div className="header-container">
-                <h2>Color Details</h2>
-                <p className="form-subheading">Have you selected a color? Great! Now provide us with a little more information that will help us make a recommendation that's customized to your needs.</p>
-            </div>
-            
+  return (
+    <form className="section-wrapper" id="colorPicker">
+      <SectionHeader title="ColorDetail" />
+      <div className="header-container">
+        <h2>Color Details</h2>
+        <p className="form-subheading">
+          Have you selected a color? Great! Now provide us with a little more
+          information that will help us make a recommendation that's customized
+          to your needs.
+        </p>
+      </div>
 
             <div className="input-container">
                 <label
@@ -189,6 +197,19 @@ const PromptForm = ({
                 ></input>
             </div>
 
+      <div className="input-container">
+        <label htmlFor="misc-info">
+          Is there anything else we should know before making a recommendation?
+        </label>
+        <textarea
+          id="misc-info"
+          name="misc-info"
+          placeholder="Type any additional information here (300 characters or less)"
+          maxLength="300"
+          value={miscInfoValue}
+          onChange={handleMiscInfoChange}
+        ></textarea>
+      </div>
 
             <div className="input-container">
                 <label
@@ -212,4 +233,4 @@ const PromptForm = ({
     )
 }
 
-export default PromptForm
+export default PromptForm;

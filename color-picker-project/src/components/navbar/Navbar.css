@@ -41,6 +41,7 @@
   height: 30px;
   overflow: hidden;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .nav-link span {
@@ -50,11 +51,11 @@
 }
 
 .nav-link span:first-child {
-  color: #6b7280;
+  color: var(--accent-color);
 }
 
 .nav-link span:last-child {
-  color: #6366f1;
+  color: var(--accent-color);
 }
 
 .signIn-button,
@@ -99,6 +100,7 @@
   align-items: start;
   gap: 8px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .menu-link span {

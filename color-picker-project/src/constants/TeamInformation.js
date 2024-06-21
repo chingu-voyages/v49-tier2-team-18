@@ -1,6 +1,6 @@
 import ProfilePic1 from "../assets/TanProfile.png";
 import ProfilePic2 from "../assets/BrianProfileimg.png";
-import ProfilePic3 from "../assets/MatthewProfile.jpeg";
+import ProfilePic3 from "../assets/MatthewProfile.png";
 import ProfileBlank from "../assets/Default_pfp.jpg";
 
 export const TEAM_INFORMATION = [
@@ -38,7 +38,7 @@ export const TEAM_INFORMATION = [
     LinkedInProfile: "https://www.linkedin.com/in/jonathanwmendez/",
     GitHubProfile: "https://github.com/jonathanwmendez",
     description:
-      "Web Developer | Professional Musician"
+      "Web Developer | Professional Musician",
   },
   {
     name: "Sushmita Ghosh",
@@ -47,6 +47,6 @@ export const TEAM_INFORMATION = [
     LinkedInProfile: "https://www.linkedin.com/in/sushghosh/",
     GitHubProfile: "https://github.com/Sushmita-Ghosh",
     description:
-      "I'm a passionate Frontend Developer based out of the beautiful land of Canada. My journey in the world of web development has been an exciting adventure, and I'm here to share my experiences and contribute to innovative projects."
-  }
+      "I'm a passionate Frontend Developer based out of the beautiful land of Canada. My journey in the world of web development has been an exciting adventure, and I'm here to share my experiences and contribute to innovative projects.",
+  },
 ];

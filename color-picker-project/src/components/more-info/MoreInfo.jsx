@@ -1,11 +1,12 @@
-import "./MoreInfo.css"
+import SectionHeader from "../utils/SectionHeader";
+import "./MoreInfo.css";
 
 const MoreInfo = () => {
-
     return (
-        <section className="more-info-section">
+        // Potential layout issues if section-wrapper and more-info-section have conflicting css.
+        <section className="section-wrapper more-info-section" id="about">
 
-            <h2>More Information</h2>
+            <SectionHeader title="About" dir="" />
 
             <div className="info-container">
 
